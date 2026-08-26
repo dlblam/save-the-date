@@ -97,3 +97,9 @@
     font-size: 3rem;
     color: #b5838d;    /* Màu hồng đất nhã nhặn */
 }
+
+.qr-image-placeholder img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
