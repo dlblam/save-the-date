@@ -336,11 +336,11 @@
     <div class="invitation-card" id="mainCard">
         <div class="hỷ-badge">囍</div>
         <div class="couple-name">
-            <p>Taki Tachibana</p>
+            <p>Ngọc Mạnh</p>
             <div class="ampersand">&</div>
-            <p>Miyamizu Mitsuha</p>
+            <p>Ánh Dương</p>
         </div>
-        <div class="date-txt">1 tháng 2, 2026</div>
+        <div class="date-txt">25 tháng 10, 2026</div>
 
         <div class="invite-label">Kính mời</div>
 
@@ -427,6 +427,48 @@
                 window.location.href = 'thiepmoi.html';
             }, 1200); // Khớp hoàn hảo với thời gian kết thúc của hiệu ứng hạt tinh tú
         }
+    </script>
+    <script>
+        window.addEventListener('load', () => {
+            // Danh sách tất cả ảnh gốc cần tải trước
+            const imagesToPreload = [
+                "public/img/Ảnh Cưới/a3.jpg",
+                "public/img/Ảnh Cưới/a4.jpg",
+                "public/img/Ảnh Cưới/a5.jpg",
+                "public/img/Ảnh Cưới/a6.jpg",
+                "public/img/Ảnh Cưới/a7.webp",
+                "public/img/Ảnh Cưới/a8.webp",
+                "public/img/Ảnh Cưới/a9.webp",
+                "public/img/Ảnh Cưới/b1.webp",
+                "public/img/Ảnh Cưới/b2.webp",
+                "public/img/Ảnh Cưới/b3.webp",
+                "public/img/Ảnh Cưới/b4.webp",
+                "public/img/Ảnh Cưới/b5.webp",
+                "public/img/Ảnh Cưới/b6.webp",
+                "public/img/Ảnh Cưới/b7.webp",
+                "public/img/Ảnh Cưới/b8.webp",
+                "public/img/Ảnh Cưới/b9.webp",
+                "public/img/Ảnh Cưới/c1.webp",
+                "public/img/Ảnh Cưới/c2.webp",
+                "public/img/Ảnh Cưới/c3.webp"
+            ];
+
+            // Chỉ thực hiện nạp ngầm khi trang web đã nạp xong toàn bộ giao diện chính
+            const preloadTask = () => {
+                imagesToPreload.forEach((src) => {
+                    fetch(src, { priority: 'low' }) // Tải với độ ưu tiên thấp để không giành băng thông
+                        .then(response => response.blob())
+                        .catch(err => console.log('Chờ tải:', src));
+                });
+            };
+
+            // Tận dụng thời gian rảnh của máy tính để tải
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(preloadTask);
+            } else {
+                setTimeout(preloadTask, 2000); // Máy cũ thì ưu tiên chờ 2 giây sau mới nạp
+            }
+        });
     </script>
 </body>
 
