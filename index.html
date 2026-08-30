@@ -39,8 +39,8 @@
         }
 
         body {
-            background-color: #2b080c;
-            /* Màu đỏ rượu chát sâu như hình nền */
+            background-color: #120204;
+            /* Nền Đỏ Đen Nhung Đêm sâu thẳm, nam tính cho Anh Rể */
             font-family: 'Playfair Display', serif;
             overflow: hidden;
         }
@@ -57,18 +57,18 @@
         .gate-panel {
             width: 50%;
             height: 100%;
-            background: #500e14;
-            /* Màu đỏ của phông nền chính */
+            background: #280509;
+            /* Đỏ rượu chát trầm sang trọng */
             transition: transform 1.3s cubic-bezier(0.85, 0, 0.15, 1);
         }
 
         .panel-left {
-            border-right: 1px solid rgba(244, 235, 217, 0.2);
+            border-right: 1px solid rgba(212, 175, 55, 0.3);
             transform-origin: left;
         }
 
         .panel-right {
-            border-left: 1px solid rgba(244, 235, 217, 0.2);
+            border-left: 1px solid rgba(212, 175, 55, 0.3);
             transform-origin: right;
         }
 
@@ -81,10 +81,10 @@
             width: 90%;
             max-width: 420px;
             height: 480px;
-            background-color: #b01c23;
-            /* Đỏ tươi rực rỡ của cánh thiệp */
+            background-color: #5c0a12;
+            /* Đỏ Ruby đậm lịch lãm */
             border-radius: 12px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(212, 175, 55, 0.25);
             z-index: 10000;
             display: flex;
             flex-direction: column;
@@ -96,65 +96,66 @@
 
             /* NÂNG CẤP: Hoa văn Long Phụng mạ vàng chìm quý phái dùng mã SVG nhúng tinh tế */
             background-image:
-                linear-gradient(135deg, rgba(244, 235, 217, 0.15) 0%, transparent 100%),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 5t-5 10h10zm0 50t-5-10h10zM5 30t10-5v10zm50 0t-10-5v10z' fill='%23d4af37' fill-opacity='0.08'/%3E%3C/svg%3E");
+                linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, transparent 100%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 5t-5 10h10zm0 50t-5-10h10zM5 30t10-5v10zm50 0t-10-5v10z' fill='%23ffd700' fill-opacity='0.12'/%3E%3C/svg%3E");
             background-size: cover, 40px 40px;
 
             /* NÂNG CẤP: Viền chỉ vàng kép góc hoàng gia */
-            outline: 1px solid rgba(212, 175, 55, 0.4);
+            outline: 1px solid rgba(255, 215, 0, 0.5);
             outline-offset: -10px;
             border: 3px solid #d4af37;
-            /* Màu vàng Gold sang trọng */
+            /* Màu vàng Gold hoàng gia */
         }
 
         /* Vòng tròn hỷ biểu tượng trên cùng */
         .hỷ-badge {
             width: 45px;
             height: 45px;
-            background: linear-gradient(135deg, #fcf8f2 0%, #f4ebd9 100%);
+            background: linear-gradient(135deg, #fffdfa 0%, #fef3c7 100%);
             border-radius: 50%;
-            color: #b01c23;
+            color: #7f1d1d;
             font-size: 22px;
             font-weight: bold;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-bottom: 25px;
-            box-shadow: 0 0 15px rgba(244, 235, 217, 0.4);
-            border: 1px solid #d4af37;
+            box-shadow: 0 0 18px rgba(255, 215, 0, 0.6);
+            border: 1px solid #fbbf24;
             animation: pulseGlow 2s infinite alternate;
             /* Hiệu ứng đập nhẹ */
         }
 
         @keyframes pulseGlow {
             0% {
-                box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+                box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
             }
 
             100% {
-                box-shadow: 0 0 20px rgba(212, 175, 55, 0.7);
+                box-shadow: 0 0 25px rgba(255, 215, 0, 0.9);
             }
         }
 
         .couple-name {
             font-size: 32px;
-            color: #f4ebd9;
+            color: #fef3c7;
+            /* Vàng kem nhẹ dạ quang */
             font-weight: 700;
             line-height: 1.4;
             letter-spacing: 1px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
         }
 
         .ampersand {
             font-size: 20px;
-            color: rgba(244, 235, 217, 0.7);
+            color: rgba(254, 243, 199, 0.7);
             font-style: italic;
             margin: 5px 0;
         }
 
         .date-txt {
             font-size: 14px;
-            color: #f4ebd9;
+            color: #fef3c7;
             margin-top: 20px;
             letter-spacing: 1px;
             font-weight: 300;
@@ -162,31 +163,32 @@
 
         .invite-label {
             font-size: 13px;
-            color: rgba(244, 235, 217, 0.6);
+            color: rgba(254, 243, 199, 0.6);
             margin-top: 25px;
             font-style: italic;
         }
 
         .guest-name {
             font-size: 18px;
-            color: #f4ebd9;
+            color: #ffe4e6;
             font-weight: bold;
             margin: 5px 0 15px 0;
-            border-bottom: 1px dashed rgba(244, 235, 217, 0.4);
+            border-bottom: 1px dashed rgba(254, 243, 199, 0.5);
             padding-bottom: 3px;
             min-width: 120px;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
         }
 
         .sub-invite {
             font-size: 11px;
-            color: rgba(244, 235, 217, 0.7);
+            color: rgba(254, 243, 199, 0.7);
             margin-bottom: 30px;
         }
 
         /* Nút mở thiệp thiết kế bo góc trứng dài giống hệt mẫu mẫu */
         .btn-open {
-            background: linear-gradient(135deg, #fcf8f2 0%, #f4ebd9 100%);
-            color: #b01c23;
+            background: linear-gradient(135deg, #fffdfa 0%, #fef3c7 100%);
+            color: #7f1d1d;
             border: 1px solid #d4af37;
             padding: 10px 45px;
             font-size: 14px;
@@ -194,23 +196,24 @@
             border-radius: 25px;
             cursor: pointer;
             letter-spacing: 1px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 215, 0, 0.4);
             transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
         }
 
         .btn-open:hover {
             transform: scale(1.05);
-            background: linear-gradient(135deg, #ffffff 0%, #f4ebd9 100%);
-            box-shadow: 0 0 25px rgba(244, 235, 217, 0.8), inset 0 0 5px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, #ffffff 0%, #fef3c7 100%);
+            box-shadow: 0 0 28px rgba(255, 215, 0, 0.9), inset 0 0 5px rgba(212, 175, 55, 0.8);
         }
 
         /* Chữ hỷ rơi nền */
         .bg-glow-text {
             position: absolute;
-            color: rgba(244, 235, 217, 0.04);
+            color: rgba(255, 215, 0, 0.08);
             font-size: 18px;
             pointer-events: none;
             user-select: none;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
         }
 
         /* Trạng thái khi kích hoạt chuyển trang */
@@ -237,12 +240,12 @@
             left: -10%;
             width: 140%;
             height: 4px;
-            background: linear-gradient(90deg, transparent, #8bf3ff, #ff8ba4, transparent);
+            background: linear-gradient(90deg, transparent, #ffd700, #fffdfa, transparent);
             transform: rotate(-40deg);
             z-index: 10005;
             opacity: 0;
             pointer-events: none;
-            filter: drop-shadow(0 0 10px #8bf3ff);
+            filter: drop-shadow(0 0 10px #ffd700);
         }
 
         .anime-comet.active {
@@ -273,7 +276,7 @@
             transform: translate(-50%, -50%) scale(0);
             width: 10px;
             height: 10px;
-            border: 2px solid #ff8ba4;
+            border: 2px solid #ffd700;
             border-radius: 50%;
             z-index: 10004;
             pointer-events: none;
@@ -288,12 +291,12 @@
             0% {
                 transform: translate(-50%, -50%) scale(0);
                 opacity: 1;
-                border-color: #8bf3ff;
+                border-color: #ffd700;
             }
 
             50% {
-                border-color: #ff5e7e;
-                box-shadow: 0 0 30px rgba(255, 94, 126, 0.6);
+                border-color: #fffdfa;
+                box-shadow: 0 0 35px rgba(255, 215, 0, 0.8);
             }
 
             100% {
@@ -342,7 +345,7 @@
             <div class="ampersand">&</div>
             <p>Ánh Dương</p>
         </div>
-        <div class="date-txt">25 tháng 10, 2026</div>
+        <div class="date-txt">28 tháng 10, 2026</div>
 
         <div class="invite-label">Kính mời</div>
 
@@ -404,8 +407,8 @@
                 dust.style.width = size + 'px';
                 dust.style.height = size + 'px';
 
-                // Phối màu ánh kim vũ trụ (Xanh ngọc pha hồng phấn)
-                dust.style.background = Math.random() > 0.5 ? '#8bf3ff' : '#ff94b8';
+                // Phối màu ánh kim vũ trụ (Chùm Vàng Hoàng Kim & Bạch Kim)
+                dust.style.background = Math.random() > 0.5 ? '#ffd700' : '#ffffff';
                 dust.style.boxShadow = `0 0 10px ${dust.style.background}`;
 
                 // Tính toán góc bắn ngẫu nhiên ra toàn không gian
